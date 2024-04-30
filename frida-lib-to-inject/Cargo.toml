@@ -1,0 +1,19 @@
+[package]
+edition = "2021"
+name = "frida-lib-to-inject"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+config = { path = "../config" }
+
+frida-gum = { workspace = true, features = [
+    "auto-download",
+    "invocation-listener",
+] }
+lazy_static = { workspace = true }
+serde_json = { workspace = true, features = ["std"] }

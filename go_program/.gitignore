@@ -1,0 +1,3 @@
+target/*
+cgo_program/cgo_program
+go_program/go_program

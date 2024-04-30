@@ -1,0 +1,11 @@
+[package]
+edition = "2021"
+name = "frida-injector"
+version = "0.1.0"
+
+[dependencies]
+config = { path = "../config" }
+
+frida = { workspace = true, features = ["auto-download"] }
+clap = { workspace = true, default-features = true, features = ["derive"] }
+serde_json = { workspace = true }
